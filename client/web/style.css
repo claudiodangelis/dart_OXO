@@ -1,0 +1,118 @@
+/*
+   Copyright 2013 Claudio d'Angelis <claudiodangelis@gmail.com>
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http:www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size:x-large;
+  text-align:center;
+}
+
+h1 {
+  color: #0096D2;
+}
+
+#gamePanel {
+  display:none;
+  visibility:hidden;
+}
+
+.label {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #CDEB8B;
+  font-size:medium;
+  font-style: italic;
+}
+
+.player {
+  font-size:medium;
+  font-weight: bold;
+ }
+
+#infoContainer {
+  padding:10px;
+  margin-bottom:15px;
+  border: 1px solid #CCC;
+  background-color: #FFFEFA;
+  border-radius: 5px;
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#statusContainer {
+  width: 45%;
+  float:left;
+  margin-right:30px;
+}
+
+#status {
+  margin-top: -10px;
+}
+
+#playersContainer {
+  width: 45%;
+  float:left;
+  line-height: 0.5em;
+}
+
+.symbol{
+  font-size:large;
+}
+
+.o{
+  color: #0096D2;
+}
+
+.x{
+  color: #00D8C5;
+}
+
+#loginPanel{
+  margin-top:150px;
+}
+
+#logo {
+  margin-bottom:30px;
+}
+
+input{
+  border-radius: 3px;
+  padding: 8px 9px;
+  font-size:large;
+  width:300px
+}
+
+button {
+  background: #00D8C5;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  color: white;
+  padding: 8px 0 9px;
+  text-align: center;
+  width: 70px;
+  font-size:large;
+}
+
+button:hover {
+  background: #1BE3D1;
+}
+
+button:active {
+  background: #0ABFAF;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright 2013 Claudio d'Angelis <claudiodangelis@gmail.com>
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<html>
+  <head>
+    <title>index</title>
+  </head>
+  <link rel="stylesheet" media="screen" href="style.css"/>
+  <body>
+    <div id="loginPanel">
+      <canvas id="logo" width="600" height="200"></canvas>
+      <br/>
+      <input type="text" id="inputNickname" placeholder="Insert your nickname"/>
+      <button id="loginBtn">Play!</button>
+    </div>
+    <div id="gamePanel">
+      <div id="infoContainer">
+        <div id="statusContainer">
+          <p class="label">Game status:</p>
+          <p id="status"></p>
+        </div>
+        <div id="playersContainer">
+            <p class="label">You</p>
+            <p class="player" id="meStats"></p>
+            <p class="label">Your opponent</p>
+            <p class="player" id="opponentStats"></p>
+        </div>
+      <div style="clear:both"></div>
+      </div>
+      <canvas id="canvas" width="600" height="600"></canvas>
+    </div>
+    <script type="application/dart" src="app.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a
+         dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
