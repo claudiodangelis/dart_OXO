@@ -21,8 +21,8 @@ Dart implementation of the tic-tac-toe game, built as a sample application to sh
 
 2. Run the server on the host machine:
 
-		cd /path/to/dart_OXO
-		dart server/bin/server.dart
+		cd /path/to/dart_OXO/server/bin
+		dart server.dart
 
 3. Open a browser at:
 	
