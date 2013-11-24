@@ -36,29 +36,29 @@ class Connection {
 
     ws.onMessage.listen((e){
       // Client receives a message from server
-      Map dataFromServer = JSON.parse(e.data);
+      Map dataFromServer = JSON.decode(e.data);
       // Choosing an action accordingly to command sent by server
       switch(dataFromServer["cmd"]) {
         case "start":
           // Both players are ready to start
           // Assigning players' data to local objects
           game.me.myTurn =
-              JSON.parse(
+              JSON.decode(
                   dataFromServer["arg"][game.me.number.toString()]
                   )["myTurn"];
 
           game.me.points =
-              JSON.parse(
+              JSON.decode(
                   dataFromServer["arg"][game.me.number.toString()]
                   )["points"];
 
           game.opponent.nickname =
-              JSON.parse(
+              JSON.decode(
                   dataFromServer["arg"][game.opponent.number.toString()]
                   )["nickname"];
 
           game.opponent.points =
-              JSON.parse(
+              JSON.decode(
                   dataFromServer["arg"][game.opponent.number.toString()]
                   )["points"];
 
@@ -163,6 +163,6 @@ class Connection {
 
   void send(Map message) {
     // Sends stringified map-based message to server
-    ws.send(JSON.stringify(message));
+    ws.send(JSON.encode(message));
   }
 }

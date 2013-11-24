@@ -49,26 +49,26 @@ class GameHandler {
   onConnection(WebSocket conn) {
     // Server receives a message
     void onMessage(String message) {
-      Map dataFromClient = JSON.parse(message);
+      Map dataFromClient = JSON.decode(message);
       // Choosing an action accordingly to received command
       switch(dataFromClient["cmd"]){
         case "getNumber":
           // Checking if there's room for one more player
           if(wsConnections.length==2) {
-            conn.add(JSON.stringify({"cmd":"accessDenied"}));
+            conn.add(JSON.encode({"cmd":"accessDenied"}));
           } else {
             if (playerOne == null) {
               // First player to join, assigning
               playerOne = new Player(dataFromClient["arg"]);
               // Sending the number to the client
-              conn.add(JSON.stringify({"cmd":"setNumber","arg":1}));
+              conn.add(JSON.encode({"cmd":"setNumber","arg":1}));
               // Adding the connections to wsConnections
               wsConnections.add(conn);
             } else {
               // Player one exists, so assigning to player two
               playerTwo = new Player(dataFromClient["arg"]);
               // Sending the number to the client
-              conn.add(JSON.stringify({"cmd":"setNumber","arg":2}));
+              conn.add(JSON.encode({"cmd":"setNumber","arg":2}));
               // Adding the connections to wsConnections
               wsConnections.add(conn);
 
@@ -149,19 +149,19 @@ class GameHandler {
 
   void _countdown() {
     // Letting players know that a new game is about to start
-    int count = 0;
+    int count = 3;
     // Waits two seconds before launching the countdown
     new Timer(new Duration(seconds:2), (){
       new Timer.periodic(new Duration(seconds:1), (Timer timer){
-        if (count==3) {
+        if (count==0) {
           timer.cancel();
           _start();
         }
         _sendToAll({
           "cmd":"message",
-          "arg":"Starting a new game in ${3 - count} seconds..."
+          "arg":"Starting a new game in $count seconds..."
         });
-        count++;
+        count--;
       });
 
     });
@@ -178,7 +178,7 @@ class GameHandler {
   void _sendToAll(Map message){
     // Sending a message to players
     wsConnections.forEach((WebSocket conn){
-      conn.add(JSON.stringify(message));
+      conn.add(JSON.encode(message));
     });
   }
 

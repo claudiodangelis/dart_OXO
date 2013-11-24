@@ -15,7 +15,7 @@
 library client_library;
 import 'dart:html';
 import 'dart:async';
-import 'dart:json' as JSON;
+import 'dart:convert' show JSON;
 import 'dart:math' as Math;
 
 part 'src/gui.dart';

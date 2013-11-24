@@ -16,17 +16,17 @@ part of client_library;
 
 // These are all the DOM elements that we have to handle
 
-DivElement loginPanel = query("#loginPanel");
-DivElement gamePanel = query("#gamePanel");
-InputElement inputNickname = query("#inputNickname");
-ButtonElement loginBtn = query("#loginBtn");
-CanvasElement canvasGame = query("#canvas");
-CanvasElement canvasLogo = query("#logo");
+DivElement loginPanel = querySelector("#loginPanel");
+DivElement gamePanel = querySelector("#gamePanel");
+InputElement inputNickname = querySelector("#inputNickname");
+ButtonElement loginBtn = querySelector("#loginBtn");
+CanvasElement canvasGame = querySelector("#canvas");
+CanvasElement canvasLogo = querySelector("#logo");
 CanvasRenderingContext2D contextLogo = canvasLogo.context2D;
 CanvasRenderingContext2D contextGame = canvasGame.context2D;
-ParagraphElement status = query("#status");
-ParagraphElement meStats = query("#meStats");
-ParagraphElement opponentStats = query("#opponentStats");
+ParagraphElement status = querySelector("#status");
+ParagraphElement meStats = querySelector("#meStats");
+ParagraphElement opponentStats = querySelector("#opponentStats");
 
 void drawGrid() {
   // A blank grid is drawn

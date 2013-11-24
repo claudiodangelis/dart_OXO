@@ -13,8 +13,6 @@
 //   limitations under the License.
 
 import 'dart:html';
-import 'dart:json' as JSON;
-
 import 'package:dart_OXO_client/client_library.dart';
 
 void main() {

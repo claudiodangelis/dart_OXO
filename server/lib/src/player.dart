@@ -24,11 +24,10 @@ class Player{
   }
 
   String _serialize() {
-    return JSON.stringify({
+    return JSON.encode({
       "nickname" : this.nickname,
       "points" : this.points,
       "myTurn" : this.myTurn
     });
   }
-
 }
