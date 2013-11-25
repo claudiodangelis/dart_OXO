@@ -2,6 +2,6 @@ name: dart_OXO_client
 version: 0.2.0
 author: Claudio d'Angelis
 environment:
-  sdk: '>=0.8.10+6 <2.0.0'
+  sdk: any
 dependencies:
   browser: any

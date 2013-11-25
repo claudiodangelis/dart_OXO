@@ -14,9 +14,9 @@ Dart implementation of the tic-tac-toe game, built as a sample application to sh
 1. Install the dependencies:
 
 		cd /path/to/dart_OXO/client
-		pub install
+		pub get
 		cd /path/to/dart_OXO/server
-		pub install
+		pub get
 		
 
 2. Run the server on the host machine:
