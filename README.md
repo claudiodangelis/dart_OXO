@@ -11,10 +11,11 @@ Dart implementation of the tic-tac-toe game, built as a sample application to sh
 
 ## Usage
 
-1. Install the dependencies:
+1. Install the dependencies and compile the client to Javascript:
 
 		cd /path/to/dart_OXO/client
 		pub get
+        pub build
 		cd /path/to/dart_OXO/server
 		pub get
 		

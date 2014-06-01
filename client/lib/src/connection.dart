@@ -23,7 +23,7 @@ class Connection {
   Connection(this.url, this.game) {
     _init();
   }
-
+  
   void _init() {
     ws = new WebSocket(this.url);
     ws.onOpen.listen((e){
